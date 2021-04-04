@@ -1,4 +1,4 @@
-# Time: O(1)
+# Time: O(Log n)
 # Space: O(1)
 
 
