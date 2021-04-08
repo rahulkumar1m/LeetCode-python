@@ -10,9 +10,9 @@
 
 # You can return the answer in any order.
 
-class Solution:
+
+class Solution1:
     def twoSum(self, nums, target: int):
-        h = {}
         # Looping through all elements in the list to check for 
         for i in range(len(nums)-1):
             for j in range(i+1, len(nums)):
@@ -21,3 +21,15 @@ class Solution:
         
         return []
 
+class Solution2:
+    def twoSum(self, nums, target: int):
+        h = {}
+        # Looping through all elements in the list to check for 
+        for i, num in enumerate(nums):
+            n = target - num
+            if n not in h:
+                h[num] = i
+            else:
+                return [h[num], i]
+        
+        return []
